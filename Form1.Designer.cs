@@ -39,12 +39,16 @@
             dtNgaysinh = new DateTimePicker();
             label5 = new Label();
             txtDiaChi = new TextBox();
+            dataGridView1 = new DataGridView();
+            btnxoa = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Tahoma", 13F);
+            label1.ForeColor = Color.FromArgb(0, 192, 0);
             label1.Location = new Point(149, 72);
             label1.Name = "label1";
             label1.Size = new Size(106, 42);
@@ -63,6 +67,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Tahoma", 13F);
+            label2.ForeColor = Color.FromArgb(0, 192, 0);
             label2.Location = new Point(149, 189);
             label2.Name = "label2";
             label2.Size = new Size(122, 42);
@@ -73,6 +78,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Tahoma", 13F);
+            label3.ForeColor = Color.FromArgb(0, 192, 0);
             label3.Location = new Point(149, 292);
             label3.Name = "label3";
             label3.Size = new Size(148, 42);
@@ -83,6 +89,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Tahoma", 13F);
+            label4.ForeColor = Color.FromArgb(0, 192, 0);
             label4.Location = new Point(149, 414);
             label4.Name = "label4";
             label4.Size = new Size(170, 42);
@@ -108,7 +115,7 @@
             // btnnhap
             // 
             btnnhap.Font = new Font("Tahoma", 13F);
-            btnnhap.Location = new Point(1134, 313);
+            btnnhap.Location = new Point(1126, 225);
             btnnhap.Name = "btnnhap";
             btnnhap.Size = new Size(151, 76);
             btnnhap.TabIndex = 2;
@@ -128,7 +135,8 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Tahoma", 13F);
-            label5.Location = new Point(149, 555);
+            label5.ForeColor = Color.FromArgb(0, 192, 0);
+            label5.Location = new Point(149, 524);
             label5.Name = "label5";
             label5.Size = new Size(123, 42);
             label5.TabIndex = 0;
@@ -138,16 +146,39 @@
             // txtDiaChi
             // 
             txtDiaChi.Font = new Font("Tahoma", 13F);
-            txtDiaChi.Location = new Point(451, 548);
+            txtDiaChi.Location = new Point(451, 524);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(463, 49);
             txtDiaChi.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(113, 639);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 82;
+            dataGridView1.Size = new Size(1495, 327);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // btnxoa
+            // 
+            btnxoa.Font = new Font("Tahoma", 13F);
+            btnxoa.Location = new Point(1147, 418);
+            btnxoa.Name = "btnxoa";
+            btnxoa.Size = new Size(150, 74);
+            btnxoa.TabIndex = 5;
+            btnxoa.Text = "Xoá";
+            btnxoa.UseVisualStyleBackColor = true;
+            btnxoa.Click += btnxoa_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2104, 962);
+            Controls.Add(btnxoa);
+            Controls.Add(dataGridView1);
             Controls.Add(dtNgaysinh);
             Controls.Add(btnnhap);
             Controls.Add(txtDiaChi);
@@ -162,6 +193,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -179,5 +211,7 @@
         private DateTimePicker dtNgaysinh;
         private Label label5;
         private TextBox txtDiaChi;
+        private DataGridView dataGridView1;
+        private Button btnxoa;
     }
 }
