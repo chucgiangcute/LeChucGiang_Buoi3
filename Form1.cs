@@ -1,4 +1,6 @@
-﻿namespace LeChucGiang_Buoi3
+﻿using System.Diagnostics.Eventing.Reader;
+
+namespace LeChucGiang_Buoi3
 {
     public partial class Form1 : Form
     {
@@ -41,9 +43,30 @@
 
         private void btnxoa_Click(object sender, EventArgs e)
         {
-            li_sv.Remove(li_sv[0]);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = li_sv;
+            foreach(DanhSachSinhVien i in li_sv)
+            {
+                if (txtMssv.Text == i.MSSV)
+                {
+                    li_sv.Remove(li_sv[0]);
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = li_sv;
+                }
+                  
+            }
+            
+
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btntim_Click(object sender, EventArgs e)
+        {
+          
+                
         }
     }
 }
